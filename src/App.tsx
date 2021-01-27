@@ -1,7 +1,14 @@
 import React from "react";
+import { GlobalStyle } from "./globalStyle";
+import { LandingPage } from "./pages";
 
 const App: React.FC = () => {
-	return <div className='App'></div>;
+	return (
+		<React.Fragment>
+			<GlobalStyle />
+			<LandingPage></LandingPage>
+		</React.Fragment>
+	);
 };
 
 export default App;
