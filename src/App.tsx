@@ -1,12 +1,12 @@
 import React from "react";
 import { GlobalStyle } from "./globalStyle";
-import { LandingPage } from "./pages";
+import Router from "./Router";
 
 const App: React.FC = () => {
 	return (
 		<React.Fragment>
 			<GlobalStyle />
-			<LandingPage></LandingPage>
+			<Router />
 		</React.Fragment>
 	);
 };
