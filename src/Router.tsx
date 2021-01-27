@@ -5,7 +5,7 @@ import { LandingPage } from "./pages";
 const Router: React.FC = () => {
 	return (
 		<Switch>
-			<Route component={LandingPage} />
+			<Route exact component={LandingPage} path='/' />
 		</Switch>
 	);
 };

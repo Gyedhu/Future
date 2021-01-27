@@ -19,4 +19,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  button {
+    cursor: pointer;
+    transition: .2s;
+  }
+
+  button:active {
+    opacity: .5;
+  }
 `;
