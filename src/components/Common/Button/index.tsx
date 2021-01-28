@@ -1,12 +1,13 @@
 import React from "react";
-import { ButtonContainer } from "./style";
+import { ButtonContainer, StyleProps } from "./style";
 
-interface Props {
+interface Props extends StyleProps {
 	children: React.ReactNode;
+	onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const Button: React.FC<Props> = ({ children }: Props) => {
-	return <ButtonContainer>{children}</ButtonContainer>;
+const Button: React.FC<Props> = ({ children, ...props }: Props) => {
+	return <ButtonContainer {...props}>{children}</ButtonContainer>;
 };
 
 export default Button;

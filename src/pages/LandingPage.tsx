@@ -30,7 +30,7 @@ const LandingPage: React.FC = () => {
 		<LandingPageContainer>
 			<FontAwesomeIcon size='3x' icon={faUserSecret} />
 			<Line>Comming soon</Line>
-			<Button>
+			<Button primary>
 				Signin
 				<FontAwesomeIcon icon={faSignInAlt} />
 			</Button>
