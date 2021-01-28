@@ -5,6 +5,7 @@ export interface StyleProps {
 	link?: boolean;
 	outline?: boolean;
 	primary?: boolean;
+	size?: number;
 }
 
 export const ButtonContainer = styled.button<StyleProps>`
@@ -14,7 +15,7 @@ export const ButtonContainer = styled.button<StyleProps>`
 	border-radius: 5px;
 	display: flex;
 	gap: 10px;
-	font-size: 15px;
+	font-size: ${(props) => props.size}px;
 	padding: 0;
 
 	${(props) =>
