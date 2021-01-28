@@ -12,6 +12,10 @@ const LandingPageContainer = styled.div`
 	height: 100vh;
 	justify-content: center;
 	width: 100vw;
+
+	& > svg {
+		color: ${(props) => props.theme.primary};
+	}
 `;
 
 const Line = styled.p`
@@ -21,10 +25,10 @@ const Line = styled.p`
 `;
 
 const Button = styled.button`
-	background-color: #49886b;
+	background-color: ${(props) => props.theme.primary};
 	border: 0;
 	border-radius: 5px;
-	color: white;
+	color:  ${(props) => props.theme.primaryText};
 	font-size: 18px;
 	outline: 0;
 	padding: 10px 50px;
@@ -33,7 +37,7 @@ const Button = styled.button`
 const LandingPage: React.FC = () => {
 	return (
 		<LandingPageContainer>
-			<FontAwesomeIcon size='3x' icon={faUserSecret} color='#49886b' />
+			<FontAwesomeIcon size='3x' icon={faUserSecret} />
 			<Line>Comming soon</Line>
 			<Button>Signin</Button>
 		</LandingPageContainer>
