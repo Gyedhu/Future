@@ -1,7 +1,8 @@
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt, faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
+import { Button } from "../components";
 
 const LandingPageContainer = styled.div`
 	align-items: center;
@@ -24,22 +25,15 @@ const Line = styled.p`
 	text-align: center;
 `;
 
-const Button = styled.button`
-	background-color: ${(props) => props.theme.primary};
-	border: 0;
-	border-radius: 5px;
-	color:  ${(props) => props.theme.primaryText};
-	font-size: 18px;
-	outline: 0;
-	padding: 10px 50px;
-`;
-
 const LandingPage: React.FC = () => {
 	return (
 		<LandingPageContainer>
 			<FontAwesomeIcon size='3x' icon={faUserSecret} />
 			<Line>Comming soon</Line>
-			<Button>Signin</Button>
+			<Button>
+				Signin
+				<FontAwesomeIcon icon={faSignInAlt} />
+			</Button>
 		</LandingPageContainer>
 	);
 };
